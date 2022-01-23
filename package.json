@@ -1,0 +1,20 @@
+{
+  "name": "fleoHackathon",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon -r dotenv/config src/index.js"
+  },
+  "author": "vishnuMohanan <iamvm.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "firebase": "^9.6.4",
+    "firebase-admin": "^10.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^14.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
