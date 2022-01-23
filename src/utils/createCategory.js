@@ -4,7 +4,6 @@ const tataSalesCollection = firestore.collection("tata");
 
 
 createCategory = async (req, res, next) => {
-    console.log("reached here");
     const parentID = req.query.parent;
     const newDocData = {
         current: req.query.current,
@@ -17,7 +16,7 @@ createCategory = async (req, res, next) => {
 
     const op = await tataSalesCollection.doc(parentID).update({child: newDocID});
 
-    res.send("done");
+    res.send("add done !!");
 }
 
 module.exports = createCategory;
