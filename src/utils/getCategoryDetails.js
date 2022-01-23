@@ -17,9 +17,9 @@ createCategory = async (req, res, next) => {
     if (!categoryDoc.exists) {
         console.log(`No such document ID: ${categoryID}!`);
     } else {
-        docTree = categoryDoc;
+        docTree = categoryDoc.data;
         while (docTree.child !== null && levelNumber--) {
-            docTree.child = getDoc(docTree.child);
+            docTree.child = getDoc(docTree.child).data;
         }
 
         res.json(docTree);
