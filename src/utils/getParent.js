@@ -13,7 +13,7 @@ getParent = async (req, res, next) => {
     const snapshot = getDocWithChild(id);
 
     if (snapshot.empty) {
-        res.send(`No such document`);
+        res.send(null);
     } else {
         res.json(snapshot.data);
     }
